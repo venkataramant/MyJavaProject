@@ -1,0 +1,14 @@
+<project default="build" basedir="..">
+	<property name="tempBuildDir" value="temp-build" />
+	<property name="buildDir" value="build" />
+	<target name="compile">
+		<javac srcdir="src" destdir="${tempBuildDir}\classes" classpath="jarfile" debug="on" />
+	</target>
+	<target name="clean">
+		<delete dir="${tempBuildDir}" />
+		<mkdir dir="${tempBuildDir}" />
+		<mkdir dir="${tempBuildDir}/classes" />
+	</target>
+	<target name="build" depends="clean,compile">
+	</target>
+</project>
