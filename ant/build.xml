@@ -8,7 +8,10 @@
 		<delete dir="${tempBuildDir}" />
 		<mkdir dir="${tempBuildDir}" />
 		<mkdir dir="${tempBuildDir}/classes" />
+		<mkdir dir="${buildDir}" />
 	</target>
 	<target name="build" depends="clean,compile">
+		<jar destfile="${buildDir}/MyJavaProject.jar" basedir="${tempBuildDir}/classes">
+		</jar>
 	</target>
 </project>
